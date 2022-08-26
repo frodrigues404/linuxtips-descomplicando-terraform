@@ -12,15 +12,15 @@ provider "aws" {
   region = "us-east-1"
 }
 
-provider "aws" {
-  alias  = "west"
-  region = "us-west-1"
-}
-
-# terraform {
-#   backend "s3" {
-#     bucket = "fernando.rodrigues-tfstates"
-#     key    = "day01/terraform.tfstate"
-#     region = "us-east-1"
-#   }
+# provider "aws" {
+#   alias  = "west"
+#   region = "us-west-1"
 # }
+
+terraform {
+  backend "s3" {
+    bucket = "fernando.rodrigues-tfstates"
+    key    = "day02/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
